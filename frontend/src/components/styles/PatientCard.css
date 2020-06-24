@@ -1,6 +1,10 @@
 .patientCard {
   width: 25em;
-  height: 5em;
+  height: 10em;
   background: #eff2f6;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
