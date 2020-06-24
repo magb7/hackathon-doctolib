@@ -1,0 +1,7 @@
+.welcome {
+  background: linear-gradient(180deg, #68b7dd 0%, #5594db 100%);
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  text-decoration: none;
+}
