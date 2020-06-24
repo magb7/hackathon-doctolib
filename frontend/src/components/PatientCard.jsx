@@ -11,13 +11,23 @@ const PatientCard = () => {
             <div className="card_title">
               <p className="card_firstname">{patient.firstname}</p>
               <p className="card_lastname">{patient.lastname}</p>
+              <div className="card_icons">
+                {patient.atRisk ? (
+                  <img src="/icons/bookmark_orange.png" alt="bookmark" />
+                ) : null}
+                <img src="/icons/more.png" alt="more options" />
+              </div>
             </div>
-            <img src="/icons/more.png" alt="more options" />
-            <div className="card_mail">
-              Information contact : {patient.email}
+            <div className="card_info">
+              <div className="card_mail">
+                Information contact : {patient.email}
+              </div>
+              <div className="card_maj">
+                Données mises à jour le {patient.lastAppointment}
+              </div>
             </div>
-            <div className="card_maj">
-              Données mises à jour le {patient.lastAppointment}
+            <div>
+              <button className="chat_btn"></button>
             </div>
           </div>
         );

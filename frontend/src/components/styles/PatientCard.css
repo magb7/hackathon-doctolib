@@ -8,13 +8,13 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: left;
   margin: 10px;
   padding: 2em;
   cursor: pointer;
   transition: 0.3s;
 }
-.card img {
+.card_icons img {
+  align-items: right;
   width: 20px;
   height: 20px;
 }
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: row;
   color: rgb(37, 37, 37);
-  font-size: bold;
+  font-size: medium;
 }
 
 .card_firstname {
@@ -48,4 +48,14 @@
 .card_maj {
   font-size: 0.7rem;
   line-height: 1.4rem;
+}
+
+/* .chat_btn {
+  background-image: ;
+} */
+
+@media (max-width: 990px) {
+  .card {
+    width: auto;
+  }
 }
