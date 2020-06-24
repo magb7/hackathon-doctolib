@@ -81,15 +81,20 @@ nav ul li:hover img {
 nav ul li a:active img {
   opacity: 1;
 }
+
+.settings {
+  margin-top: 50%;
+}
+
 @media (max-width: 990px) {
   .menu {
     grid-template-columns: 1fr;
     justify-items: center;
   }
   .menu__info img {
-    width: 40px;
-    height: 40px;
-    clip-path: circle(40%);
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
   }
 
   .menu__info h4 {

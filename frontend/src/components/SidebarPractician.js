@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/Sidebar.css";
-
 const SidebarPractician = () => {
   return (
     <>
@@ -15,10 +15,12 @@ const SidebarPractician = () => {
           </div>
           <nav>
             <ul>
-              <li>
-                <img src="/icons/dashboard.png" alt="dashboard menu" />
-                <span>Dashboard</span>
-              </li>
+              <Link to="/">
+                <li>
+                  <img src="/icons/dashboard.png" alt="dashboard menu" />
+                  <span>Dashboard</span>
+                </li>
+              </Link>
               <li>
                 <img
                   src="/icons/calendar.png"
@@ -33,6 +35,10 @@ const SidebarPractician = () => {
               <li>
                 <img src="/icons/bookmark.png" alt="bookmark" />
                 <span>Patients bookmarks</span>
+              </li>
+              <li className="settings">
+                <img src="/icons/gear.png" alt="settings" />
+                <span>Settings</span>
               </li>
             </ul>
           </nav>
