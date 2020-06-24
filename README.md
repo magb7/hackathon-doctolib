@@ -1,3 +1,8 @@
 ## Hackathon Doctolib
 
-# Team member
+# Team members
+
+- Benjamin Durand
+- Liora Laulier
+- Margaux Bédu
+- Maxime Rawinski
