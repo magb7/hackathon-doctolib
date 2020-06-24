@@ -6,8 +6,8 @@ import SidebarPractician from "./components/SidebarPractician";
 import "./App.css";
 
 const App = () => (
-  <Router>
-    <div className="App">
+  <div className="App">
+    <Router>
       <div className="aside">
         <SidebarPractician />
       </div>
@@ -15,7 +15,7 @@ const App = () => (
         <Route path="/" exact component={Join} />
         <Route path="/chat" component={Chat} />
       </div>
-    </div>
-  </Router>
+    </Router>
+  </div>
 );
 export default App;

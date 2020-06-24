@@ -7,33 +7,31 @@ const SidebarPractician = () => {
       <aside className="navbar">
         <div className="menu">
           <div className="menu__info">
-            <a href="">
-              <img
-                src="https://randomuser.me/api/portraits/women/4.jpg"
-                alt="practician pic"
-              />
-            </a>
+            <img
+              src="https://randomuser.me/api/portraits/women/4.jpg"
+              alt="practician pic"
+            />
+            <h4>Dr Emily Carlton</h4>
           </div>
           <nav>
             <ul>
-              <a>
-                <li>
-                  <img src="/icons/dashboard.png" alt="dashboard menu" />
-                  <span>Dashboard</span>
-                </li>
-              </a>
               <li>
-                <img src="/computer.png" alt="Latest medical appointments" />
-                <span>Latest medical appointments</span>
+                <img src="/icons/dashboard.png" alt="dashboard menu" />
+                <span>Dashboard</span>
               </li>
-              <a href="">
-                <li>
-                  <img src="/steam.png" alt="bookmark" />
-                  <span>Patients lists</span>
-                </li>
-              </a>
               <li>
-                <img src="/paint.png" alt="theme" />
+                <img
+                  src="/icons/calendar.png"
+                  alt="Latest medical appointments"
+                />
+                <span>Latest appointments</span>
+              </li>
+              <li>
+                <img src="/icons/list.png" alt="list" />
+                <span>Patients lists</span>
+              </li>
+              <li>
+                <img src="/icons/bookmark.png" alt="bookmark" />
                 <span>Patients bookmarks</span>
               </li>
             </ul>

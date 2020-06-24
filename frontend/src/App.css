@@ -1,18 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .App {
   display: grid;
+  width: 100%;
   grid-template-areas:
-    "aside content content"
-    "aside content content"
-    "aside content content"
-    "aside content content";
+    "aside content"
+    "aside content"
+    "aside content"
+    "aside content";
   grid-template-rows: auto;
-  grid-template-columns: 17% 1fr 2fr 1fr;
-  grid-column-gap: 0;
+  grid-template-columns: 20% 5fr;
+  grid-column-gap: 3px;
 }
 
 body {
