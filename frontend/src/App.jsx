@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Join from "./components/Join";
 import Chat from "./components/Chat";
 import SidebarPractician from "./components/SidebarPractician";
+import SidebarPatient from "./components/SidebarPatient";
 import "./App.css";
 
 const App = () => (
