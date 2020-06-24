@@ -1,10 +1,51 @@
-.patientCard {
-  width: 25em;
-  height: 10em;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.card {
+  font-family: 'Lato', sans-serif;
+  width: 22em;
+  height: 6em;
   background: #eff2f6;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   margin: 10px;
+  padding: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card img {
+  width: 20px;
+  height: 20px;
+}
+.card:hover {
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_avatar {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+}
+
+.card_title {
+  display: flex;
+  flex-direction: row;
+  color: rgb(37, 37, 37);
+  font-size: bold;
+}
+
+.card_firstname {
+  margin-right: 5px;
+}
+
+.card_mail {
+  color: darken;
+  font-size: 0.8rem;
+  margin: 5px 0 20px;
+}
+
+.card_maj {
+  font-size: 0.7rem;
+  line-height: 1.4rem;
 }

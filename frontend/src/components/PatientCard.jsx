@@ -7,13 +7,16 @@ const PatientCard = () => {
     <>
       {Patients.map((patient) => {
         return (
-          <div className="patientCard">
-            <p className="card-title">
-              {patient.firstname}
-              {patient.lastname}
-            </p>
-            <div className="mail">Information contact : {patient.email}</div>
-            <div className="maj">
+          <div className="card">
+            <div className="card_title">
+              <p className="card_firstname">{patient.firstname}</p>
+              <p className="card_lastname">{patient.lastname}</p>
+            </div>
+            <img src="/icons/more.png" alt="more options" />
+            <div className="card_mail">
+              Information contact : {patient.email}
+            </div>
+            <div className="card_maj">
               Données mises à jour le {patient.lastAppointment}
             </div>
           </div>
