@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import PatientsContext from "../contexts/patients-context";
+import Patients from "../Patients";
 import "./styles/Sidebar.css";
+
 const SidebarPractician = () => {
+  const { patients, setPatients } = useContext(PatientsContext);
+
+  const getBookmarks = () => {
+    const atRiskPatients = patients.filter((patient) => {
+      return patient.atRisk === true;
+    });
+    setPatients(atRiskPatients);
+  };
+
+  const getAllPatients = () => {
+    setPatients([...Patients]);
+  };
+
+  const getLatest = () => {
+    const LatestPatients = patients.sort((a, b) => {
+      return Date.parse(b.lastAppointment) - Date.parse(a.lastAppointment);
+    });
+    setPatients([...LatestPatients]);
+  };
+
   return (
     <>
       <aside className="navbar">
@@ -21,18 +44,30 @@ const SidebarPractician = () => {
                   <span>Dashboard</span>
                 </li>
               </Link>
-              <li>
+              <li
+                onClick={() => {
+                  getLatest();
+                }}
+              >
                 <img
                   src="/icons/calendar.png"
                   alt="Latest medical appointments"
                 />
                 <span>Latest appointments</span>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  getAllPatients();
+                }}
+              >
                 <img src="/icons/list.png" alt="list" />
                 <span>Patients lists</span>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  getBookmarks();
+                }}
+              >
                 <img src="/icons/bookmark.png" alt="bookmark" />
                 <span>Patients bookmarks</span>
               </li>

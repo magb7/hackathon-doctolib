@@ -4,13 +4,12 @@
   font-family: "Lato", sans-serif;
   width: 50vw;
   height: auto;
-  background: #eff2f6;
+  background: rgb(239, 242, 246);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: 10px;
   padding: 1em;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -24,6 +23,7 @@
   width: 20px;
   height: 20px;
 }
+
 .card:hover {
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
@@ -52,10 +52,32 @@
   text-transform: uppercase;
 }
 
-.card_mail {
+.card_mail ul {
   color: darken;
   font-size: 0.8rem;
-  margin: 5px 0 20px;
+  margin: 10px 0px;
+  line-height: 22px;
+  list-style: none;
+}
+
+.card_mail ul li {
+  display: flex;
+  align-items: center;
+  color: darken;
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+
+.card_mail_img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.card_phone_img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .card_maj {
@@ -64,7 +86,23 @@
 }
 
 .chat_btn {
+  margin-top: 5px;
   align-self: flex-end;
+}
+
+.chat_btn button {
+  border: 1px solid #5594db;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(239, 242, 246);
+  color: #5594db;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chat_btn button:hover {
+  background-color: #5594db;
+  color: white;
 }
 
 @media (max-width: 990px) {

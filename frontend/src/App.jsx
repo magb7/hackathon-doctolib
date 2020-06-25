@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import PracticianPage from "./components/PracticianPage";
-import Login from "./components/Login";
+import PatientPage from "./components/PatientPage";
 import SignIn from "./components/Join";
+import Login from "./components/Login";
+import Patients from "./Patients";
+import PatientsContext from "./contexts/patients-context";
 import "./App.css";
 
-const App = () => {
+const routes = [
+  {
+    path: "/patient",
+    component: PatientPage,
+  },
+  {
+    path: "/practician",
+    component: PracticianPage,
+  },
+];
+
+function RouteWithSubRoutes(route) {
   return (
     <>
       <Router>
@@ -19,5 +33,25 @@ const App = () => {
       </Router>
     </>
   );
+}
+
+const App = () => {
+  const [patients, setPatients] = useState([...Patients]);
+  const [title, setTitle] = useState("Patients Lists");
+  const value = { patients, setPatients, title, setTitle };
+
+  return (
+    <PatientsContext.Provider value={value}>
+      <Router>
+        <Route path="/" exact component={Login} />
+        <Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
+        </Switch>
+      </Router>
+    </PatientsContext.Provider>
+  );
 };
+
 export default App;
