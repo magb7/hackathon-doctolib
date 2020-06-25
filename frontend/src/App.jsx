@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PatientPage from "./components/PatientPage";
 import PracticianPage from "./components/PracticianPage";
 import Login from "./components/Login";
+import Chat from "./components/Chat";
 import "./App.css";
 const routes = [
   {
@@ -26,6 +27,7 @@ const App = () => (
   <>
     <Router>
       <Route path="/" exact component={Login} />
+      <Route path="/login/Chat" component={Chat} />
       <Switch>
         {routes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />

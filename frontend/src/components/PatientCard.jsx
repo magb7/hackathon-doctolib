@@ -1,6 +1,7 @@
-import React from 'react';
-import './styles/PatientCard.css';
-import Patients from './../Patients';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles/PatientCard.css";
+import Patients from "./../Patients";
 
 const PatientCard = () => {
   return (
@@ -28,9 +29,15 @@ const PatientCard = () => {
                 Data update {patient.lastAppointment}
               </div>
             </div>
-            <div className="chat_btn">
+            <Link
+              className="chat_btn"
+              onClick={(e) =>
+                !patient.name || !patient.room ? e.preventDefault() : null
+              }
+              to={`/login/chat?name=${patient.name}&room=${patient.room}`}
+            >
               <button>Start a conversation</button>
-            </div>
+            </Link>
           </div>
         );
       })}
