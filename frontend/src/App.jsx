@@ -1,22 +1,37 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Join from "./components/Join";
-import Chat from "./components/Chat";
-import SidebarPractician from "./components/SidebarPractician";
-import SidebarPatient from "./components/SidebarPatient";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PatientPage from "./components/PatientPage";
+import PracticianPage from "./components/PracticianPage";
+import Login from "./components/Login";
 import "./App.css";
-
+const routes = [
+  {
+    path: "/patient",
+    component: PatientPage,
+  },
+  {
+    path: "/login",
+    component: PracticianPage,
+  },
+];
+function RouteWithSubRoutes(route) {
+  return (
+    <Route
+      path={route.path}
+      render={(props) => <route.component {...props} routes={route.routes} />}
+    />
+  );
+}
 const App = () => (
-  <div className="App">
+  <>
     <Router>
-      <div className="aside">
-        <SidebarPractician />
-      </div>
-      <div className="content">
-        <Route path="/" exact component={Join} />
-        <Route path="/chat" component={Chat} />
-      </div>
+      <Route path="/" exact component={Login} />
+      <Switch>
+        {routes.map((route, i) => (
+          <RouteWithSubRoutes key={i} {...route} />
+        ))}
+      </Switch>
     </Router>
-  </div>
+  </>
 );
 export default App;
