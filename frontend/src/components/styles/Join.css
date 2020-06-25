@@ -37,14 +37,13 @@ body {
   color: white;
   font-size: 2.5em;
   padding-bottom: 10px;
-  border-bottom: 2px solid white;
 }
 
 .button {
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: rgb(212, 88, 42);
+  background: #e5a33f;
   padding: 20px;
   border-radius: 7px;
   display: inline-block;

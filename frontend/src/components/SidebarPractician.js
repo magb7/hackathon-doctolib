@@ -15,12 +15,10 @@ const SidebarPractician = () => {
           </div>
           <nav>
             <ul>
-              <Link to="/">
-                <li>
-                  <img src="/icons/dashboard.png" alt="dashboard menu" />
-                  <span>Dashboard</span>
-                </li>
-              </Link>
+              <li>
+                <img src="/icons/dashboard.png" alt="dashboard menu" />
+                <span>Dashboard</span>
+              </li>
               <li>
                 <img
                   src="/icons/calendar.png"
@@ -36,10 +34,12 @@ const SidebarPractician = () => {
                 <img src="/icons/bookmark.png" alt="bookmark" />
                 <span>Patients bookmarks</span>
               </li>
-              <li className="settings">
-                <img src="/icons/gear.png" alt="settings" />
-                <span>Settings</span>
-              </li>
+              <Link to="/">
+                <li className="settings">
+                  <img src="/icons/gear.png" alt="settings" title="logout" />
+                  <span>Settings</span>
+                </li>
+              </Link>
             </ul>
           </nav>
         </div>
