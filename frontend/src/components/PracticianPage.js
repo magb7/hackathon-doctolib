@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
 import SidebarPractician from "./SidebarPractician";
 import PatientCard from "./PatientCard";
-import Chat from "./Chat";
 import Patients from "../Patients";
 import PatientsContext from "../contexts/patients-context";
 import "./styles/Page.css";
@@ -17,12 +15,9 @@ const PracticianPage = () => {
         <div className="aside">
           <SidebarPractician />
         </div>
-        <Switch>
-          <div className="content">
-            <Route exact path="/login" component={PatientCard} />
-            <Route path="/login/chat" component={Chat} />
-          </div>
-        </Switch>
+        <div className="content">
+          <PatientCard />
+        </div>
       </div>
     </PatientsContext.Provider>
   );

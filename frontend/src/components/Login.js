@@ -11,7 +11,7 @@ const Login = () => {
         <Link className="patient" to="/patient">
           Êtes-vous patient ?
         </Link>
-        <Link className="patient" to="/login">
+        <Link className="patient" to="/practician">
           Êtes vous médecin ?
         </Link>
       </div>

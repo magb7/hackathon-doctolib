@@ -9,7 +9,7 @@ const PatientPage = () => (
       <SidebarPatient />
     </div>
     <div className="content">
-      <Chat location="/chat/:name/:room}" />
+      <Chat location="/chat/:name/:room" />
     </div>
   </div>
 );

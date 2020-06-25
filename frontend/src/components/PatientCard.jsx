@@ -36,7 +36,7 @@ const PatientCard = () => {
               onClick={(e) =>
                 !patient.name || !patient.room ? e.preventDefault() : null
               }
-              to={`/login/chat?name=${patient.name}&room=${patient.room}`}
+              to={`/chat/practician/${patient.name}/${patient.room}`}
             >
               <button>Start a conversation</button>
             </Link>

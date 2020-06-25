@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/Join.css";
-import PatientPage from "./PatientPage";
 
 export default function SignIn() {
   const [name, setName] = useState("");
@@ -29,7 +28,7 @@ export default function SignIn() {
         </div>
         <Link
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-          to={`/chat?name=${name}&room=${room}`}
+          to={`/chat/patient/${name}/${room}`}
         >
           <button className={"button mt-20"} type="submit">
             Sign In
