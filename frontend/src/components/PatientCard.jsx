@@ -73,7 +73,7 @@ const PatientCard = () => {
             </div>
             <Link
               className="chat_btn"
-              to={`/login/chat?name=${patient.name}&room=${patient.room}`}
+              to={`/practician/chat?name=${patient.name}&room=${patient.room}`}
             >
               <button>Start a conversation</button>
             </Link>
