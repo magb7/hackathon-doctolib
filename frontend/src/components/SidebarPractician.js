@@ -19,7 +19,6 @@ const SidebarPractician = () => {
   };
 
   const getLatest = () => {
-    // sort sur les dates de rdv
     const LatestPatients = patients.sort((a, b) => {
       return Date.parse(b.lastAppointment) - Date.parse(a.lastAppointment);
     });
