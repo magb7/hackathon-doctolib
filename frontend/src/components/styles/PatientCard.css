@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.card {
+  font-family: 'Lato', sans-serif;
+  width: 22em;
+  height: auto;
+  background: #eff2f6;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card_icons {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-self: end;
+}
+.card_icons img {
+  align-items: right;
+  width: 20px;
+  height: 20px;
+}
+.card:hover {
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_avatar {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+}
+
+.card_title {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 50% 25% 25;
+  align-items: center;
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+  border-color: 2px solid pink;
+}
+
+.card_name {
+  margin-right: 5px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card_mail {
+  color: darken;
+  font-size: 0.8rem;
+  margin: 5px 0 20px;
+}
+
+.card_maj {
+  font-size: 0.7rem;
+  line-height: 1.4rem;
+}
+
+.chat_btn {
+  align-self: flex-end;
+}
+
+@media (max-width: 990px) {
+  .card {
+    width: auto;
+  }
+  .card_title {
+    grid-template-columns: 35% 35% 30%;
+  }
+}
