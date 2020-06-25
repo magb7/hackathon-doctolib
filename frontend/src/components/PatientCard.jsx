@@ -9,8 +9,11 @@ const PatientCard = () => {
         return (
           <div className="card">
             <div className="card_title">
-              <p className="card_firstname">{patient.firstname}</p>
-              <p className="card_lastname">{patient.lastname}</p>
+              <div className="card_name">
+                <p>
+                  {patient.lastname} {patient.firstname}
+                </p>
+              </div>
               <div className="card_icons">
                 {patient.atRisk ? (
                   <img src="/icons/bookmark_orange.png" alt="bookmark" />
