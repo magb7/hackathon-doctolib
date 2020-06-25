@@ -5,17 +5,22 @@ import Patients from "../Patients";
 import "./styles/Sidebar.css";
 
 const SidebarPractician = () => {
-  const { patients, setPatients } = useContext(PatientsContext);
+  const { patients, setPatients, setTitle } = useContext(PatientsContext);
 
   const getBookmarks = () => {
     const atRiskPatients = patients.filter((patient) => {
       return patient.atRisk === true;
     });
     setPatients(atRiskPatients);
+    setTitle("Patients Bookmarks");
   };
 
   const getAllPatients = () => {
-    setPatients([...Patients]);
+    const AllPatients = [...Patients].sort(function (a, b) {
+      return a.lastname.localeCompare(b.lastname);
+    });
+    setPatients([...AllPatients]);
+    setTitle("All patients");
   };
 
   const getLatest = () => {
@@ -23,6 +28,7 @@ const SidebarPractician = () => {
       return Date.parse(b.lastAppointment) - Date.parse(a.lastAppointment);
     });
     setPatients([...LatestPatients]);
+    setTitle("Latest Appointments");
   };
 
   return (
@@ -38,30 +44,21 @@ const SidebarPractician = () => {
           </div>
           <nav>
             <ul>
-              <Link to="/">
-                <li>
-                  <img src="/icons/dashboard.png" alt="dashboard menu" />
-                  <span>Dashboard</span>
-                </li>
-              </Link>
-              <li
-                onClick={() => {
-                  getLatest();
-                }}
-              >
-                <img
-                  src="/icons/calendar.png"
-                  alt="Latest medical appointments"
-                />
-                <span>Latest appointments</span>
-              </li>
               <li
                 onClick={() => {
                   getAllPatients();
                 }}
               >
                 <img src="/icons/list.png" alt="list" />
-                <span>Patients lists</span>
+                <span>All patients</span>
+              </li>
+              <li
+                onClick={() => {
+                  getLatest();
+                }}
+              >
+                <img src="/icons/clock.png" alt="Latest medical appointments" />
+                <span>Latest appointments</span>
               </li>
               <li
                 onClick={() => {
@@ -71,10 +68,12 @@ const SidebarPractician = () => {
                 <img src="/icons/bookmark.png" alt="bookmark" />
                 <span>Patients bookmarks</span>
               </li>
-              <li className="settings">
-                <img src="/icons/gear.png" alt="settings" />
-                <span>Settings</span>
-              </li>
+              <Link to="/">
+                <li className="settings">
+                  <img src="/icons/logout.png" alt="settings" title="logout" />
+                  <span>Logout</span>
+                </li>
+              </Link>
             </ul>
           </nav>
         </div>

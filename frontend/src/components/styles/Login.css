@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap");
+
 .welcome {
   background: linear-gradient(180deg, #68b7dd 0%, #5594db 100%);
   width: 100vw;
@@ -8,17 +10,31 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  font-size: 1.6rem;
+}
+.welcome h1 {
+  font-size: 3rem;
+  font-family: "MuseoModerno", cursive;
+  margin: 30px;
+}
+.welcome img {
+  width: 20%;
+  align-self: center;
 }
 
 .link {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  margin-top: 30px;
   color: white;
+  border-radius: 3px;
+  background-color: #e5a33f;
+  width: 100%;
+  align-self: center;
+  text-transform: uppercase;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.patient {
-  padding: 30px;
-  color: white;
+.link:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #68b7dd;
 }
