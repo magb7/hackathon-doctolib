@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PatientPage from "./components/PatientPage";
 import PracticianPage from "./components/PracticianPage";
 import Login from "./components/Login";
-import Chat from "./components/Chat";
 import "./App.css";
+
 const routes = [
   {
     path: "/patient",
