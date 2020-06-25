@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Join from "./components/Join";
+import PatientPage from "./components/PatientPage";
 import PracticianPage from "./components/PracticianPage";
 import Login from "./components/Login";
 import "./App.css";
 const routes = [
   {
-    path: "/join",
-    component: Join,
+    path: "/patient",
+    component: PatientPage,
   },
   {
     path: "/login",

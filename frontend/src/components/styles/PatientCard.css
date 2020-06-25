@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 .card {
-  font-family: 'Lato', sans-serif;
-  width: 22em;
+  font-family: "Lato", sans-serif;
+  width: 50vw;
   height: auto;
   background: #eff2f6;
   border-radius: 5px;

@@ -1,5 +1,6 @@
 import React from "react";
 import SidebarPractician from "./SidebarPractician";
+import PatientCard from "./PatientCard";
 import "./styles/Page.css";
 
 const PracticianPage = () => (
@@ -7,7 +8,9 @@ const PracticianPage = () => (
     <div className="aside">
       <SidebarPractician />
     </div>
-    <div className="content"></div>
+    <div className="content">
+      <PatientCard />
+    </div>
   </div>
 );
 export default PracticianPage;
