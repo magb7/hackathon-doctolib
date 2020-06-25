@@ -25,6 +25,7 @@ const SidebarPatient = () => {
                 contentStyle={{
                   width: '400px',
                   borderRadius: '5px',
+                  paddingRight: '2px',
                 }}
                 position="right center"
                 closeOnDocumentClick

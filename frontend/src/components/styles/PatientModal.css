@@ -8,11 +8,13 @@
 }
 .modal > .header {
   width: 100%;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   font-family: 'lato', sans-serif;
   font-size: 1.6em;
   text-align: center;
+  letter-spacing: 2px;
   padding: 5px;
+  color: #5594db;
 }
 .modal > .content {
   width: 100%;

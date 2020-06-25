@@ -11,11 +11,10 @@ export default ({ close }) => (
       {' '}
       <p>Firstname :</p>
       <p>Lastname :</p>
-      <p>Age :</p>
-      <p>Adress :</p>
       <p>Mail :</p>
       <p>Last appointment :</p>
       <p>Other :</p>
     </div>
+    <button>MODIFIER</button>
   </div>
 );
