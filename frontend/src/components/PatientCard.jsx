@@ -17,7 +17,7 @@ const PatientCard = () => {
 
   return (
     <>
-      <p>{title}</p>
+      <p className="page_title">{title}</p>
       {patients.map((patient, index) => {
         return (
           <div className="card" key={index}>
