@@ -26,8 +26,8 @@ const PatientCard = () => {
                 Données mises à jour le {patient.lastAppointment}
               </div>
             </div>
-            <div>
-              <button className="chat_btn"></button>
+            <div className="chat_btn">
+              <button>test</button>
             </div>
           </div>
         );

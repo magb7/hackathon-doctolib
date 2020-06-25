@@ -3,7 +3,7 @@
 .card {
   font-family: 'Lato', sans-serif;
   width: 22em;
-  height: 6em;
+  height: auto;
   background: #eff2f6;
   border-radius: 5px;
   display: flex;
@@ -12,6 +12,12 @@
   padding: 2em;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.card_icons {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-self: end;
 }
 .card_icons img {
   align-items: right;
@@ -29,14 +35,23 @@
 }
 
 .card_title {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 25% 25% 50%;
   color: rgb(37, 37, 37);
-  font-size: medium;
+  font-weight: bold;
+  border-color: 2px solid pink;
 }
 
 .card_firstname {
   margin-right: 5px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.card_lastname {
+  margin-right: 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .card_mail {
@@ -50,12 +65,15 @@
   line-height: 1.4rem;
 }
 
-/* .chat_btn {
-  background-image: ;
-} */
+.chat_btn {
+  align-self: flex-end;
+}
 
 @media (max-width: 990px) {
   .card {
     width: auto;
+  }
+  .card_title {
+    grid-template-columns: 35% 35% 30%;
   }
 }
