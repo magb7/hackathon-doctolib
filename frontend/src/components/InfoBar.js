@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import "./style/InfoBar.css";
+import "./styles/InfoBar.css";
 
 const InfoBar = ({ room }) => (
   <div className="infoBar">
@@ -13,9 +14,9 @@ const InfoBar = ({ room }) => (
       <h3>Room: {room}</h3>
     </div>
     <div className="rightInnerContainer">
-      <a href="/">
+      <Link to="/login">
         <img src="/icons/closeIcon.png" alt="close icon" />
-      </a>
+      </Link>
     </div>
   </div>
 );

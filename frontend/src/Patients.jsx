@@ -55,5 +55,4 @@ const Patients = [
     room: "Paulo-Avent",
   },
 ];
-
 export default Patients;
