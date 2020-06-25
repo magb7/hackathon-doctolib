@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/PatientCard.css";
-import Patients from "./../Patients";
+import Patients from "../contexts/patients-context";
 
 const PatientCard = () => {
   return (
