@@ -33,9 +33,6 @@ const PatientCard = () => {
             </div>
             <Link
               className="chat_btn"
-              onClick={(e) =>
-                !patient.name || !patient.room ? e.preventDefault() : null
-              }
               to={`/login/chat?name=${patient.name}&room=${patient.room}`}
             >
               <button>Start a conversation</button>
