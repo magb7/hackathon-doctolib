@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style/InfoBar.css";
+import "./styles/InfoBar.css";
 
 const InfoBar = ({ room }) => (
   <div className="infoBar">

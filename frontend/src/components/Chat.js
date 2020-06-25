@@ -3,14 +3,8 @@ import queryString from "query-string";
 import io from "socket.io-client";
 import InfoBar from "./InfoBar";
 import Input from "./Input";
-<<<<<<< HEAD
-import SidebarPractician from "./SidebarPractician";
 import Messages from "./Messages";
 import "./styles/Chat.css";
-=======
-import Messages from "./Messages";
-import "./style/Chat.css";
->>>>>>> 3a080a83129abd017e9cd8a86fdf5d6fa656b0a6
 
 let socket;
 
@@ -62,22 +56,17 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div className="App">
-      <div className="aside">
-        <SidebarPractician />
+    <>
+      <div className="container">
+        <InfoBar room={room} />
+        <Messages messages={messages} name={name} />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage}
+        />
       </div>
-      <div className="outerContainer">
-        <div className="container">
-          <InfoBar room={room} />
-          <Messages messages={messages} name={name} />
-          <Input
-            message={message}
-            setMessage={setMessage}
-            sendMessage={sendMessage}
-          />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 export default Chat;

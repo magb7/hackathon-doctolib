@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./styles/Message.css";
 
 const Message = ({ message: { text, user }, name }) => {
