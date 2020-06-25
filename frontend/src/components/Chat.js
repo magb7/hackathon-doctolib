@@ -52,7 +52,11 @@ const Chat = ({ location }) => {
   return (
     <div className="App">
       <div className="aside">
-        {type === "practician" ? <SidebarPractician /> : <SidebarPatient />}
+        {type === "practician" ? (
+          <SidebarPractician />
+        ) : (
+          <SidebarPatient name={name} />
+        )}
       </div>
       <div className="content">
         <div className="outerContainer">

@@ -16,8 +16,11 @@ const SidebarPractician = () => {
   };
 
   const getAllPatients = () => {
-    setPatients([...Patients]);
-    setTitle("Patients Lists");
+    const AllPatients = [...Patients].sort(function (a, b) {
+      return a.lastname.localeCompare(b.lastname);
+    });
+    setPatients([...AllPatients]);
+    setTitle("All patients");
   };
 
   const getLatest = () => {
@@ -41,30 +44,21 @@ const SidebarPractician = () => {
           </div>
           <nav>
             <ul>
-              <Link to="/">
-                <li>
-                  <img src="/icons/dashboard.png" alt="dashboard menu" />
-                  <span>Dashboard</span>
-                </li>
-              </Link>
-              <li
-                onClick={() => {
-                  getLatest();
-                }}
-              >
-                <img
-                  src="/icons/calendar.png"
-                  alt="Latest medical appointments"
-                />
-                <span>Latest appointments</span>
-              </li>
               <li
                 onClick={() => {
                   getAllPatients();
                 }}
               >
                 <img src="/icons/list.png" alt="list" />
-                <span>Patients lists</span>
+                <span>All patients</span>
+              </li>
+              <li
+                onClick={() => {
+                  getLatest();
+                }}
+              >
+                <img src="/icons/clock.png" alt="Latest medical appointments" />
+                <span>Latest appointments</span>
               </li>
               <li
                 onClick={() => {
@@ -76,8 +70,8 @@ const SidebarPractician = () => {
               </li>
               <Link to="/">
                 <li className="settings">
-                  <img src="/icons/gear.png" alt="settings" title="logout" />
-                  <span>Settings</span>
+                  <img src="/icons/logout.png" alt="settings" title="logout" />
+                  <span>Logout</span>
                 </li>
               </Link>
             </ul>
