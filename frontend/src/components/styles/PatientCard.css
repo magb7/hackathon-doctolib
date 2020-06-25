@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-/*.list_container {
+.list_container {
   width: 50vw;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 100%;
   align-items: center;
 }
 
@@ -11,7 +12,9 @@
   font-family: "Lato", sans-serif;
   margin-bottom: 15px;
   font-size: 2em;
-}*/
+  justify-self: center;
+  grid-row: 2 / 3;
+}
 
 .card {
   font-family: "Lato", sans-serif;
