@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUserName] = useState("");
-  const [email, setEmail] = useState("");
+  const [setName] = useState("");
+  const [setPassword] = useState("");
+  const [setUserName] = useState("");
+  const [setEmail] = useState("");
 
   const classes = useStyles();
   return (

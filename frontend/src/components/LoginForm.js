@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const LoginForm = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [setName] = useState("");
+  const [setPassword] = useState("");
   const classes = useStyles();
 
   return (
