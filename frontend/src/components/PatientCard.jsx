@@ -3,24 +3,21 @@ import { Link } from "react-router-dom";
 import PatientsContext from "../contexts/patients-context";
 
 import "./styles/PatientCard.css";
-import Patients from "../Patients";
 
 const PatientCard = () => {
-  const { patients, setPatients } = useContext(PatientsContext);
+  const { patients, setPatients, title } = useContext(PatientsContext);
 
-  const toggleAtRisk = (id) => {
-    console.log(id);
-    const togglePatients = patients.map((patient) => {
-      if (patient.id === id) {
-        console.log(patient.id);
-        console.log(patient.atRisk);
-      }
-    });
-    console.log(togglePatients);
+  const toggleAtRisk = (index) => {
+    let togglePatients = [...patients];
+    togglePatients[index].atRisk
+      ? (togglePatients[index].atRisk = false)
+      : (togglePatients[index].atRisk = true);
+    setPatients([...togglePatients]);
   };
 
   return (
     <>
+      <p>{title}</p>
       {patients.map((patient, index) => {
         return (
           <div className="card" key={index}>
@@ -32,8 +29,7 @@ const PatientCard = () => {
               </div>
               <div
                 onClick={() => {
-                  console.log("toggle atRisk");
-                  toggleAtRisk(patient.id);
+                  toggleAtRisk(index);
                 }}
                 className="card_icons"
               >
