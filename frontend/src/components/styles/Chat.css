@@ -1,9 +1,9 @@
-/*.outerContainer {
+.outerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}*/
+  height: 50vh;
+}
 
 .container {
   display: flex;
@@ -12,7 +12,6 @@
   background: #ffffff;
   border-radius: 8px;
   height: 60%;
-  width: 50vw;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

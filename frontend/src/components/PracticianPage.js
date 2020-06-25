@@ -14,8 +14,8 @@ const PracticianPage = () => (
     <Switch>
       <div className="content">
         <Route exact path="/login" component={PatientCard} />
+        <Route path="/login/chat" component={Chat} />
       </div>
-      <Route path="/login/chat" component={Chat} />
     </Switch>
   </div>
 );

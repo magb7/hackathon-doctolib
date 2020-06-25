@@ -27,7 +27,6 @@ const App = () => (
   <>
     <Router>
       <Route path="/" exact component={Login} />
-      <Route path="/login/Chat" component={Chat} />
       <Switch>
         {routes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />
