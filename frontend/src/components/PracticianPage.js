@@ -1,6 +1,8 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import SidebarPractician from "./SidebarPractician";
 import PatientCard from "./PatientCard";
+import Chat from "./Chat";
 import "./styles/Page.css";
 
 const PracticianPage = () => (
@@ -9,7 +11,10 @@ const PracticianPage = () => (
       <SidebarPractician />
     </div>
     <div className="content">
-      <PatientCard />
+      <Switch>
+        <Route exact path="/login" component={PatientCard} />
+        <Route path="/login/chat" component={Chat} />
+      </Switch>
     </div>
   </div>
 );

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import './style/Join.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./style/Join.css";
+import PatientPage from "./PatientPage";
 
 export default function SignIn() {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
 
   return (
     <div className="joinOuterContainer">
@@ -31,7 +31,7 @@ export default function SignIn() {
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
         >
-          <button className={'button mt-20'} type="submit">
+          <button className={"button mt-20"} type="submit">
             Sign In
           </button>
         </Link>

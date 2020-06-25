@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,24 +7,20 @@ import {
 } from "react-router-dom";
 import PatientPage from "./components/PatientPage";
 import PracticianPage from "./components/PracticianPage";
-//import Chat from "./components/Chat";
 import Login from "./components/Login";
-import Join from "./components/Join";
+import SignIn from "./components/Join";
 import "./App.css";
 
 const App = () => {
-  let { name, room } = useParams();
-  useEffect(() => {
-    getName();
-  }, [name]);
   return (
     <>
       <Router>
         <Switch>
           <Route path="/" exact component={Login} />
-          <Route path="/join" exact component={Join} />
+
+          <Route path="/chat/:name/:room" component={PatientPage} />
+          <Route path="/join" exact component={SignIn} />
           <Route path="/login" component={PracticianPage} />
-          <Route path="/chat/name=${name}/:room" component={PatientPage} />
         </Switch>
       </Router>
     </>
