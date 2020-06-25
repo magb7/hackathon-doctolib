@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import PatientsContext from "../contexts/patients-context";
 import SearchBar from "./SearchBar";
