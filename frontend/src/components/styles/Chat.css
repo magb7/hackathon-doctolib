@@ -2,27 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  margin-top: 4px;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #ffffff;
+  background: white;
+  font-family: "Roboto", sans-serif;
   border-radius: 8px;
-  height: 60%;
+  border: #eff2f6 solid 1px;
+  height: 90vh;
 }
-
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
-    width: 80%;
-    height: 80%;
+    width: 90%;
   }
 }
 
 @media (min-width: 480px) and (max-width: 1200px) {
   .container {
-    width: 60%;
+    width: 90%;
   }
 }

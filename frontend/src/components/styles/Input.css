@@ -27,3 +27,13 @@ select:focus {
   border: none;
   width: 20%;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .input {
+    width: 50%;
+    font-size: 0.8em;
+  }
+  .sendButton {
+    width: 50%;
+  }
+}
