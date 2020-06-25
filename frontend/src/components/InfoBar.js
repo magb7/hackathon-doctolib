@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./style/InfoBar.css";
+import "./styles/InfoBar.css";
 
 const InfoBar = ({ room }) => (
   <div className="infoBar">
