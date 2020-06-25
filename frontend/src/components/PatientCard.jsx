@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import PatientsContext from "../contexts/patients-context";
+
 import "./styles/PatientCard.css";
-import Patients from "../contexts/patients-context";
 
 const PatientCard = () => {
+  const { patients } = useContext(PatientsContext);
   return (
     <>
-      {Patients.map((patient) => {
+      {patients.map((patient) => {
         return (
           <div className="card">
             <div className="card_title">
