@@ -6,7 +6,8 @@ import "./styles/Login.css";
 const Login = () => {
   return (
     <div className="welcome">
-      <h1>Bienvenue sur BistouTchat</h1>
+      <img src="/icons/LogotchatCare.png" alt="logo" />
+      <h1>Tchat Care</h1>
       <div className="link">
         <Link className="patient" to="/patient">
           Êtes-vous patient ?
