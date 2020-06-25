@@ -10,7 +10,6 @@ import "./styles/Page.css";
 const PracticianPage = () => {
   const [patients, setPatients] = useState([...Patients]);
   const value = { patients, setPatients };
-  console.log(patients);
   return (
     <PatientsContext.Provider value={value}>
       <div className="App">
