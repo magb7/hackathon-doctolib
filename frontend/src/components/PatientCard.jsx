@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import PatientsContext from "../contexts/patients-context";
-
+import SearchBar from "./SearchBar";
 import "./styles/PatientCard.css";
 
 const PatientCard = () => {
   const { patients } = useContext(PatientsContext);
   return (
     <>
+      <SearchBar />
       {patients.map((patient) => {
         return (
           <div className="card">
@@ -36,7 +37,7 @@ const PatientCard = () => {
               onClick={(e) =>
                 !patient.name || !patient.room ? e.preventDefault() : null
               }
-              to={`/login/chat?name=${patient.name}&room=${patient.room}`}
+              to={`/chat/practician/${patient.name}/${patient.room}`}
             >
               <button>Start a conversation</button>
             </Link>
