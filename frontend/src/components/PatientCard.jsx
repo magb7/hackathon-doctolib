@@ -8,9 +8,9 @@ const PatientCard = () => {
   const { patients } = useContext(PatientsContext);
   return (
     <>
-      {patients.map((patient) => {
+      {patients.map((patient, index) => {
         return (
-          <div className="card">
+          <div className="card" key={index}>
             <div className="card_title">
               <div className="card_name">
                 <p>
