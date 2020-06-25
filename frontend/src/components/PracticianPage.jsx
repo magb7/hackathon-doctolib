@@ -1,30 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import SidebarPractician from "./SidebarPractician";
 import PatientCard from "./PatientCard";
 import Chat from "./Chat";
-import Patients from "../Patients";
-import PatientsContext from "../contexts/patients-context";
+
 import "./styles/Page.css";
 
 const PracticianPage = () => {
-  const [patients, setPatients] = useState([...Patients]);
-  const [title, setTitle] = useState("Patients Lists");
-  const value = { patients, setPatients, title, setTitle };
   return (
-    <PatientsContext.Provider value={value}>
-      <div className="App">
-        <div className="aside">
-          <SidebarPractician />
-        </div>
-        <Switch>
-          <div className="content">
-            <Route exact path="/login" component={PatientCard} />
-            <Route path="/login/chat" component={Chat} />
-          </div>
-        </Switch>
+    <div className="App">
+      <div className="aside">
+        <SidebarPractician />
       </div>
-    </PatientsContext.Provider>
+      <Switch>
+        <div className="content">
+          <Route exact path="/login" component={PatientCard} />
+          <Route path="/login/chat" component={Chat} />
+        </div>
+      </Switch>
+    </div>
   );
 };
 export default PracticianPage;
