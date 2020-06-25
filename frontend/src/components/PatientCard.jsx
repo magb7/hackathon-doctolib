@@ -16,9 +16,9 @@ const PatientCard = () => {
   };
 
   return (
-    <>
+    <div className="list_container">
       <SearchBar />
-      <p className="page_title">{title}</p>
+      <h3 className="list_title">{title}</h3>
       {patients.map((patient, index) => {
         return (
           <div className="card" key={index}>
@@ -80,7 +80,7 @@ const PatientCard = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
