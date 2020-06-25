@@ -5,17 +5,19 @@ import Patients from "../Patients";
 import "./styles/Sidebar.css";
 
 const SidebarPractician = () => {
-  const { patients, setPatients } = useContext(PatientsContext);
+  const { patients, setPatients, setTitle } = useContext(PatientsContext);
 
   const getBookmarks = () => {
     const atRiskPatients = patients.filter((patient) => {
       return patient.atRisk === true;
     });
     setPatients(atRiskPatients);
+    setTitle("Patients Bookmarks");
   };
 
   const getAllPatients = () => {
     setPatients([...Patients]);
+    setTitle("Patients Lists");
   };
 
   const getLatest = () => {
@@ -23,6 +25,7 @@ const SidebarPractician = () => {
       return Date.parse(b.lastAppointment) - Date.parse(a.lastAppointment);
     });
     setPatients([...LatestPatients]);
+    setTitle("Latest Appointments");
   };
 
   return (
