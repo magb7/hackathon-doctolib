@@ -74,6 +74,7 @@ const SearchBar = () => {
         return patient.lastname.toLowerCase().includes(needle.toLowerCase);
       })
     );
+    console.log(setFilter);
   };
 
   return (
