@@ -21,6 +21,12 @@
   padding: 12px;
   text-transform: uppercase;
 }
+
+.modal > .content li {
+  font-size: 1.1em;
+  color: black;
+}
+
 .modal > .actions {
   margin: auto;
 }
