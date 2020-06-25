@@ -11,14 +11,13 @@ const PatientCard = () => {
             <div className="card_title">
               <div className="card_name">
                 <p>
-                  {patient.lastname} {patient.firstname}
+                  {patient.firstname} {patient.lastname}
                 </p>
               </div>
               <div className="card_icons">
                 {patient.atRisk ? (
                   <img src="/icons/bookmark_orange.png" alt="bookmark" />
                 ) : null}
-                <img src="/icons/more.png" alt="more options" />
               </div>
             </div>
             <div className="card_info">
@@ -26,11 +25,11 @@ const PatientCard = () => {
                 Information contact : {patient.email}
               </div>
               <div className="card_maj">
-                Données mises à jour le {patient.lastAppointment}
+                Data update {patient.lastAppointment}
               </div>
             </div>
             <div className="chat_btn">
-              <button>test</button>
+              <button>Start a conversation</button>
             </div>
           </div>
         );
