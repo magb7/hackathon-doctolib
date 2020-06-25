@@ -1,0 +1,58 @@
+.modal {
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-transform: none;
+  font-weight: normal;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-family: 'lato', sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 12px;
+  text-transform: uppercase;
+}
+.modal > .actions {
+  margin: auto;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 1.2em;
+  background: #5594db;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #cfcece;
+}
+
+.modal button {
+  align-self: center;
+  border-radius: 20%;
+  padding: 6px;
+}
+.modal p {
+  margin: 5px;
+}
+.popup-content {
+  padding: 30px;
+  color: #787878;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}

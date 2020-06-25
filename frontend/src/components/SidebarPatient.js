@@ -1,5 +1,8 @@
-import React from "react";
-import "./styles/Sidebar.css";
+import React from 'react';
+import './styles/Sidebar.css';
+import Popup from 'reactjs-popup';
+import PatientModal from './PatientModal';
+
 const SidebarPatient = () => {
   return (
     <>
@@ -11,10 +14,23 @@ const SidebarPatient = () => {
           </div>
           <nav>
             <ul>
-              <li className="settings">
-                <img src="/icons/gear.png" alt="settings" />
-                <span>Settings</span>
-              </li>
+              <Popup
+                trigger={
+                  <li className="settings">
+                    {' '}
+                    <img src="/icons/gear.png" alt="settings" />
+                    <span>Settings</span>
+                  </li>
+                }
+                contentStyle={{
+                  width: '400px',
+                  borderRadius: '5px',
+                }}
+                position="right center"
+                closeOnDocumentClick
+              >
+                {(close) => <PatientModal close={close} />}
+              </Popup>
             </ul>
           </nav>
         </div>
