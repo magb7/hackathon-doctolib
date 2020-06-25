@@ -1,39 +1,33 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams,
+} from "react-router-dom";
 import PatientPage from "./components/PatientPage";
 import PracticianPage from "./components/PracticianPage";
+//import Chat from "./components/Chat";
 import Login from "./components/Login";
-import Chat from "./components/Chat";
+import Join from "./components/Join";
 import "./App.css";
-const routes = [
-  {
-    path: "/patient",
-    component: PatientPage,
-  },
-  {
-    path: "/login",
-    component: PracticianPage,
-  },
-];
-function RouteWithSubRoutes(route) {
+
+const App = () => {
+  let { name, room } = useParams();
+  useEffect(() => {
+    getName();
+  }, [name]);
   return (
-    <Route
-      path={route.path}
-      render={(props) => <route.component {...props} routes={route.routes} />}
-    />
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/join" exact component={Join} />
+          <Route path="/login" component={PracticianPage} />
+          <Route path="/chat/name=${name}/:room" component={PatientPage} />
+        </Switch>
+      </Router>
+    </>
   );
-}
-const App = () => (
-  <>
-    <Router>
-      <Route path="/" exact component={Login} />
-      <Route path="/login/Chat" component={Chat} />
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
-    </Router>
-  </>
-);
+};
 export default App;
