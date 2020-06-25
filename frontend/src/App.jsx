@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import PracticianPage from "./components/PracticianPage";
-import Login from "./components/Login";
 import SignIn from "./components/Join";
 import SignUp from "./components/Signup";
-
+import Login from "./components/Login";
+import Patients from "./Patients";
+import PatientsContext from "./contexts/patients-context";
 import "./App.css";
 
 const App = () => {
+  const [patients, setPatients] = useState([...Patients]);
+  const [title, setTitle] = useState("Patients Lists");
+  const value = { patients, setPatients, title, setTitle };
+
   return (
-    <>
+    <PatientsContext.Provider value={value}>
       <Router>
         <Switch>
           <Route path="/" exact component={Login} />
@@ -21,7 +26,8 @@ const App = () => {
           <Route exact path="/register" component={SignUp} />
         </Switch>
       </Router>
-    </>
+    </PatientsContext.Provider>
   );
 };
+
 export default App;
