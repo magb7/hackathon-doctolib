@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles/InfoBar.css";
 
-const InfoBar = ({ room }) => (
+const InfoBar = ({ room, type }) => (
   <div className="infoBar">
     <div className="leftInnerContainer">
       <img
@@ -14,9 +14,15 @@ const InfoBar = ({ room }) => (
       <h3>Room: {room}</h3>
     </div>
     <div className="rightInnerContainer">
-      <Link to="/login">
-        <img src="/icons/closeIcon.png" alt="close icon" />
-      </Link>
+      {type === "practician" ? (
+        <Link to="/practician">
+          <img src="/icons/closeIcon.png" alt="close icon" />
+        </Link>
+      ) : (
+        <Link to="/">
+          <img src="/icons/closeIcon.png" alt="close icon" />
+        </Link>
+      )}
     </div>
   </div>
 );
