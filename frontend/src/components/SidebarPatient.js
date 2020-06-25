@@ -10,7 +10,7 @@ const SidebarPatient = () => {
         <div className="menu">
           <div className="menu__info">
             <img src="/icons/user.png" alt="default avatar" />
-            <h4>Angela Gonzales</h4>
+            <h4>{props.name}</h4>
           </div>
           <nav>
             <ul>

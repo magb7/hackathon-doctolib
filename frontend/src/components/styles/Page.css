@@ -7,12 +7,8 @@
     "aside content"
     "aside content";
   grid-template-rows: auto;
-  grid-template-columns: 20% 5fr;
-  grid-column-gap: 0;
-}
-body {
-  background-color: white;
-  font-family: "Montserrat", sans-serif;
+  grid-template-columns: 20% 4fr;
+  row-gap: 10px;
 }
 
 a {
@@ -22,7 +18,7 @@ a {
 .content {
   grid-row: content;
   grid-column: content;
-  margin-left: 0.8rem;
+  margin: 0.8rem;
 }
 
 .aside {

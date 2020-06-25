@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import LoginForm from "./LoginForm";
 import "./styles/Login.css";
 
 const Login = () => {
   return (
     <div className="welcome">
-      <h1>Bienvenue sur BistouTchat</h1>
-      <div className="link">
-        <Link className="patient" to="/patient">
-          Êtes-vous patient ?
-        </Link>
-        <Link className="patient" to="/practician">
-          Êtes vous médecin ?
+      <img src="/icons/LogotchatCare.png" alt="logo" />
+      <h1>Tchat Care</h1>
+      <div>
+        <Link className="link" to="/patient">
+          Connect with your practician
         </Link>
       </div>
+      <LoginForm />
     </div>
   );
 };
