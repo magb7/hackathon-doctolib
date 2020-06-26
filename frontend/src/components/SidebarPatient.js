@@ -12,8 +12,8 @@ const SidebarPatient = (props) => {
           <nav>
             <ul>
               <li className="settings">
-                <img src="/icons/logout.png" alt="settings" />
-                <span>Logout</span>
+                <img src="/icons/gear.png" alt="settings" />
+                <span>Settings</span>
               </li>
             </ul>
           </nav>
