@@ -1,25 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import PatientsContext from "../contexts/patients-context";
-import SearchBar from "./SearchBar";
 import "./styles/PatientCard.css";
 
 const PatientCard = () => {
-  const { patients, setPatients, title } = useContext(PatientsContext);
+  const { title, filtered, setFiltered } = useContext(PatientsContext);
 
   const toggleAtRisk = (index) => {
-    let togglePatients = [...patients];
+    let togglePatients = [...filtered];
     togglePatients[index].atRisk
       ? (togglePatients[index].atRisk = false)
       : (togglePatients[index].atRisk = true);
-    setPatients([...togglePatients]);
+    setFiltered([...togglePatients]);
   };
 
   return (
     <div className="list_container">
-      <SearchBar />
       <h3 className="list_title">{title}</h3>
-      {patients.map((patient, index) => {
+      {filtered.map((patient, index) => {
         return (
           <div className="card" key={index}>
             <div className="card_title">

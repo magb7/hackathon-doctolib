@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import PatientsContext from "../contexts/patients-context";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import "./styles/PatientCard.css";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -60,29 +61,48 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchBar() {
+const SearchBar = () => {
   const classes = useStyles();
+  const { setFiltered, patients, filtered } = useContext(PatientsContext);
+
+  const searchPatients = (needle) => {
+    let currentList = [...patients];
+    let newList = [];
+    if (needle !== "") {
+      newList = [...currentList].filter((patient) => {
+        return patient.lastname.toLowerCase().includes(needle.toLowerCase());
+      });
+    } else {
+      newList = currentList;
+    }
+
+    setFiltered([...newList]);
+  };
 
   return (
-    <div className={classes.grow}>
-      {/* <AppBar position="static"> */}
-      <Toolbar>
-        <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
+    <>
+      <div className={classes.grow}>
+        <Toolbar>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              onChange={(e) => {
+                searchPatients(e.target.value);
+              }}
+              placeholder="Search patients"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ "aria-label": "search" }}
+            />
           </div>
-          <InputBase
-            placeholder="Search patients"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            inputProps={{ "aria-label": "search" }}
-          />
-        </div>
-        <div className={classes.grow} />
-      </Toolbar>
-      {/* </AppBar> */}
-    </div>
+          <div className={classes.grow} />
+        </Toolbar>
+      </div>
+    </>
   );
-}
+};
+export default SearchBar;

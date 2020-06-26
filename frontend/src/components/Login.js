@@ -6,7 +6,7 @@ import "./styles/Login.css";
 const Login = () => {
   return (
     <div className="welcome">
-      <img src="/icons/LogotchatCare.png" alt="logo" />
+      <img src="/icons/logotchatCare.png" alt="logo" />
       <h1>Tchat Care</h1>
       <div>
         <Link className="link" to="/patient">
