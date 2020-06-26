@@ -1,32 +1,32 @@
 import React, { useContext } from 'react';
 import './styles/PatientModal.css';
-import PatientsContext from '../contexts/patients-context';
+//import PatientsContext from '../contexts/patients-context';
 
-const PatientModal = () => {
-  const { patients, setPatients } = useContext(PatientsContext);
+const PatientModal = ({ close }) => {
+  //const { patients, setPatients } = useContext(PatientsContext);
   return (
     <>
-      {patients.map((patient, index) => {
-        return (
-          <div className="modal" key={index}>
-            {/* <a className="close" onClick={close}>
-              &times;
-            </a> */}
-            <div className="header">PATIENT INFORMATION</div>
-            <div className="content">
-              {' '}
-              <ul>
-                <li>Firstname : {patient.firstname}</li>
-                <li>Lastname : {patient.lastname}</li>
-                <li>Mail : {patient.mail}</li>
-                <li>Phone : {patient.phone}</li>
-                <li>Last appointment : {patient.appointment}</li>
-              </ul>
-            </div>
-            <button>MODIFIER</button>
-          </div>
-        );
-      })}
+      <div className="modal">
+        <a className="close" onClick={close}>
+          &times;
+        </a>
+        <div className="header">PATIENT INFORMATION</div>
+        <div className="content">
+          {' '}
+          <ul>
+            <li>Firstname : </li>
+            <li>Lastname : </li>
+            <li>Mail : </li>
+            <li>Phone : </li>
+            <li>Last appointment : </li>
+          </ul>
+        </div>
+        <div>
+          {' '}
+          <button>Modifier</button>
+          <button>Accéder à Doctolib</button>
+        </div>
+      </div>
     </>
   );
 };

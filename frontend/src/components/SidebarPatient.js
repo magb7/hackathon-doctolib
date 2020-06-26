@@ -3,7 +3,7 @@ import './styles/Sidebar.css';
 import Popup from 'reactjs-popup';
 import PatientModal from './PatientModal';
 
-const SidebarPatient = () => {
+const SidebarPatient = (props) => {
   return (
     <>
       <aside className="navbar">
