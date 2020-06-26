@@ -12,7 +12,15 @@ import "./App.css";
 const App = () => {
   const [patients, setPatients] = useState([...Patients]);
   const [title, setTitle] = useState("Patients Lists");
-  const value = { patients, setPatients, title, setTitle };
+  const [filtered, setFiltered] = useState(patients);
+  const value = {
+    patients,
+    setPatients,
+    title,
+    setTitle,
+    filtered,
+    setFiltered,
+  };
 
   return (
     <PatientsContext.Provider value={value}>

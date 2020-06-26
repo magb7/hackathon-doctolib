@@ -1,8 +1,6 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 import PatientsContext from "../contexts/patients-context";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
@@ -65,41 +63,34 @@ const useStyles = makeStyles((theme) => ({
 
 const SearchBar = () => {
   const classes = useStyles();
-  const { patients, setPatients, title } = useContext(PatientsContext);
-  const [filtered, setFilter] = useState([]);
+  const { setFiltered, patients, filtered } = useContext(PatientsContext);
 
-  const searchPatients = ({ needle }) => {
-    setFilter(
-      patients.filter((patient) => {
-        console.log(">>>" + patient.lastname + "<<<" + patient.id);
-        return patient.lastname.includes(needle);
-      })
-    );
+  const searchPatients = (needle) => {
+    let currentList = [...patients];
+    let newList = [];
+    if (needle !== "") {
+      newList = [...currentList].filter((patient) => {
+        return patient.lastname.toLowerCase().includes(needle.toLowerCase());
+      });
+    } else {
+      newList = currentList;
+    }
+
+    setFiltered([...newList]);
   };
 
   return (
     <>
-      <div>
-        <input
-          type="text"
-          onChange={(e) => {
-            searchPatients(e.target.value);
-          }}
-        />
-        <ul>
-          {filtered.map((patient) => {
-            return <li>{patient}</li>;
-          })}
-        </ul>
-      </div>
       <div className={classes.grow}>
-        {/* <AppBar position="static"> */}
         <Toolbar>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
+              onChange={(e) => {
+                searchPatients(e.target.value);
+              }}
               placeholder="Search patients"
               classes={{
                 root: classes.inputRoot,
@@ -110,7 +101,6 @@ const SearchBar = () => {
           </div>
           <div className={classes.grow} />
         </Toolbar>
-        {/* </AppBar> */}
       </div>
     </>
   );
