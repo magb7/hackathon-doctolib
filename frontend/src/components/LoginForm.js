@@ -37,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const LoginForm = () => {
-  const [setName] = useState("");
-  const [setPassword] = useState("");
   const classes = useStyles();
 
   return (
@@ -52,7 +50,6 @@ const LoginForm = () => {
             className={classes.root}
             label="Name"
             name="username"
-            onChange={(e) => setName(e.target.name)}
             variant="outlined"
           />
         </div>
@@ -63,7 +60,6 @@ const LoginForm = () => {
             type="password"
             label="Password"
             name="password"
-            onChange={(e) => setPassword(e.target.password)}
             variant="outlined"
           />
         </div>
