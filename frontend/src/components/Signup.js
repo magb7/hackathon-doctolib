@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -34,41 +34,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SignUp = () => {
-  const [setName] = useState("");
-  const [setPassword] = useState("");
-  const [setUserName] = useState("");
-  const [setEmail] = useState("");
-
   const classes = useStyles();
   return (
     <div className={classes.signupform}>
       <h3 className={classes.title}>Sign Up</h3>
       <div className={classes.input}>
-        <TextField
-          label="Name"
-          name="name"
-          onChange={(e) => setName(e.target.name)}
-          variant="outlined"
-        />
+        <TextField label="Name" name="name" variant="outlined" />
       </div>
       <br />
       <div className={classes.input}>
-        <TextField
-          label="UserName"
-          name="username"
-          onChange={(e) => setUserName(e.target.username)}
-          variant="outlined"
-        />
+        <TextField label="UserName" name="username" variant="outlined" />
       </div>
       <br />
       <div className={classes.input}>
-        <TextField
-          type="email"
-          label="Email"
-          name="email"
-          onChange={(e) => setEmail(e.target.email)}
-          variant="outlined"
-        />
+        <TextField type="email" label="Email" name="email" variant="outlined" />
       </div>
       <br />
       <div className={classes.input}>
@@ -76,7 +55,6 @@ const SignUp = () => {
           type="password"
           label="Password"
           name="password"
-          onChange={(e) => setPassword(e.target.password)}
           variant="outlined"
         />
       </div>
