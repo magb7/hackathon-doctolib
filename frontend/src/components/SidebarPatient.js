@@ -28,6 +28,7 @@ const SidebarPatient = (props) => {
                   width: '400px',
                   borderRadius: '5px',
                   paddingRight: '2px',
+                  marginLeft: '35px',
                 }}
                 position="right center"
                 closeOnDocumentClick

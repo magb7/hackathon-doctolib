@@ -16,7 +16,7 @@ const PatientModal = ({ close, name }) => {
           {' '}
           <div>
             {patients
-              .filter((patient) => patient.firstname === name)
+              .filter((patient) => patient.lastname === name)
               .map((filteredPatient) => (
                 <ul>
                   <li>Firstname : {filteredPatient.firstname}</li>
