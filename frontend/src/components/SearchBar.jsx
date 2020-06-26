@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
 const SearchBar = () => {
   const classes = useStyles();
-  const { setFiltered, patients, filtered } = useContext(PatientsContext);
+  const { setFiltered, patients } = useContext(PatientsContext);
 
   const searchPatients = (needle) => {
     let currentList = [...patients];

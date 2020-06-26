@@ -1,6 +1,9 @@
 .form {
   display: flex;
-  border-top: 2px solid #d3d3d3;
+  /* border-top: 2px solid #d3d3d3; */
+  border-radius: 25px;
+  width: 70vw;
+  align-items: center;
 }
 
 .input {
@@ -9,6 +12,8 @@
   padding: 5%;
   width: 80%;
   font-size: 1.2em;
+  background: lightgrey;
+  border-radius: 25px;
 }
 
 input:focus,
@@ -19,16 +24,17 @@ select:focus {
 
 .sendButton {
   color: #fff !important;
+  border-radius: 100px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #5594db;
+  background: #e5a33f;
   padding: 20px;
   display: inline-block;
   border: none;
   width: 20%;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+/* @media (min-width: 320px) and (max-width: 480px) {
   .input {
     width: 50%;
     font-size: 0.8em;
@@ -36,4 +42,4 @@ select:focus {
   .sendButton {
     width: 50%;
   }
-}
+} */
