@@ -11,7 +11,7 @@ import "./App.css";
 
 const App = () => {
   const [patients, setPatients] = useState([...Patients]);
-  const [title, setTitle] = useState("Patients Lists");
+  const [title, setTitle] = useState("All Patients");
   const [filtered, setFiltered] = useState(patients);
   const value = {
     patients,

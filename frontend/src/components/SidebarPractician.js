@@ -21,7 +21,7 @@ const SidebarPractician = () => {
     //   return a.lastname.localeCompare(b.lastname);
     // });
     setFiltered([...patients]);
-    setTitle("All patients");
+    setTitle("All Patients");
   };
 
   const getLatest = () => {
