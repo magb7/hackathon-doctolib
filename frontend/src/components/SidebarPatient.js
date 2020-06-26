@@ -2,6 +2,8 @@ import React from 'react';
 import './styles/Sidebar.css';
 import Popup from 'reactjs-popup';
 import PatientModal from './PatientModal';
+//import PatientsContext from '../contexts/patients-context';
+//import Patients from '../Patients';
 
 const SidebarPatient = (props) => {
   return (
@@ -30,7 +32,7 @@ const SidebarPatient = (props) => {
                 position="right center"
                 closeOnDocumentClick
               >
-                {(close) => <PatientModal close={close} />}
+                {(close) => <PatientModal close={close} name={props.name} />}
               </Popup>
             </ul>
           </nav>
