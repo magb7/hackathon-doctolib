@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/Sidebar.css";
 import Popup from "reactjs-popup";
 import PatientModal from "./PatientModal";
@@ -35,6 +36,12 @@ const SidebarPatient = (props) => {
               >
                 {(close) => <PatientModal close={close} name={props.name} />}
               </Popup>
+              <Link to="/">
+                <li className="settings">
+                  <img src="/icons/logout.png" alt="settings" title="logout" />
+                  <span>Logout</span>
+                </li>
+              </Link>
             </ul>
           </nav>
         </div>
