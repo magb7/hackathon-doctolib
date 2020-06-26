@@ -71,10 +71,10 @@ const SearchBar = () => {
   const searchPatients = ({ needle }) => {
     setFilter(
       patients.filter((patient) => {
-        return patient.lastname.toLowerCase().includes(needle.toLowerCase);
+        console.log(">>>" + patient.lastname + "<<<" + patient.id);
+        return patient.lastname.includes(needle);
       })
     );
-    console.log(setFilter);
   };
 
   return (
@@ -86,6 +86,11 @@ const SearchBar = () => {
             searchPatients(e.target.value);
           }}
         />
+        <ul>
+          {filtered.map((patient) => {
+            return <li>{patient}</li>;
+          })}
+        </ul>
       </div>
       <div className={classes.grow}>
         {/* <AppBar position="static"> */}
@@ -107,11 +112,6 @@ const SearchBar = () => {
         </Toolbar>
         {/* </AppBar> */}
       </div>
-      <ul>
-        {filtered.map((patient) => {
-          return <li>{patient}</li>;
-        })}
-      </ul>
     </>
   );
 };
