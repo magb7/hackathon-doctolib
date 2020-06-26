@@ -1,5 +1,8 @@
 import React from "react";
 import "./styles/Sidebar.css";
+import ScrollDialog from "./Modal";
+import { Link } from "react-router-dom";
+
 const SidebarPatient = (props) => {
   return (
     <>
@@ -9,14 +12,26 @@ const SidebarPatient = (props) => {
             <img src="/icons/user.png" alt="default avatar" />
             <h4>{props.name}</h4>
           </div>
-          <nav>
-            <ul>
-              <li className="settings">
-                <img src="/icons/gear.png" alt="settings" />
-                <span>Settings</span>
-              </li>
-            </ul>
-          </nav>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <ScrollDialog name={props.name} />
+                  <span>Settings</span>
+                </li>
+                <Link to="/">
+                  <li className="settings">
+                    <img
+                      src="/icons/logout.png"
+                      alt="settings"
+                      title="logout"
+                    />
+                    <span>Logout</span>
+                  </li>
+                </Link>
+              </ul>
+            </nav>
+          </div>
         </div>
       </aside>
     </>
