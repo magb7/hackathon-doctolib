@@ -31,7 +31,9 @@ const PatientModal = ({ close, name }) => {
 
         <div>
           {' '}
-          <button>Accéder à Doctolib</button>
+          <form action="https://www.doctolib.fr/" method="get" target="_blank">
+            <button type="submit">Accéder à Doctolib</button>
+          </form>
         </div>
       </div>
     </>
