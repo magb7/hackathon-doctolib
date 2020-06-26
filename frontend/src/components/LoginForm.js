@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -37,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const LoginForm = () => {
-  const [setName] = useState("");
-  const [setPassword] = useState("");
   const classes = useStyles();
 
   return (
@@ -52,7 +50,6 @@ const LoginForm = () => {
             className={classes.root}
             label="Name"
             name="username"
-            onChange={(e) => setName(e.target.name)}
             variant="outlined"
           />
         </div>
@@ -63,7 +60,6 @@ const LoginForm = () => {
             type="password"
             label="Password"
             name="password"
-            onChange={(e) => setPassword(e.target.password)}
             variant="outlined"
           />
         </div>
