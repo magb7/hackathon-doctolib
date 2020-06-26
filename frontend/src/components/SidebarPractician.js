@@ -1,33 +1,34 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import PatientsContext from "../contexts/patients-context";
-import Patients from "../Patients";
 import "./styles/Sidebar.css";
 
 const SidebarPractician = () => {
-  const { patients, setPatients, setTitle } = useContext(PatientsContext);
+  const { filtered, setFiltered, patients, setTitle } = useContext(
+    PatientsContext
+  );
 
   const getBookmarks = () => {
-    const atRiskPatients = patients.filter((patient) => {
+    const atRiskPatients = filtered.filter((patient) => {
       return patient.atRisk === true;
     });
-    setPatients(atRiskPatients);
+    setFiltered(atRiskPatients);
     setTitle("Patients Bookmarks");
   };
 
   const getAllPatients = () => {
-    const AllPatients = [...Patients].sort(function (a, b) {
-      return a.lastname.localeCompare(b.lastname);
-    });
-    setPatients([...AllPatients]);
+    // const AllPatients = [...patients].sort(function (a, b) {
+    //   return a.lastname.localeCompare(b.lastname);
+    // });
+    setFiltered([...patients]);
     setTitle("All patients");
   };
 
   const getLatest = () => {
-    const LatestPatients = patients.sort((a, b) => {
+    const LatestPatients = filtered.sort((a, b) => {
       return Date.parse(b.lastAppointment) - Date.parse(a.lastAppointment);
     });
-    setPatients([...LatestPatients]);
+    setFiltered([...LatestPatients]);
     setTitle("Latest Appointments");
   };
 
