@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./styles/Join.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './styles/Join.css';
 
 export default function SignIn() {
-  const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
+  const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
 
   return (
     <div className="joinOuterContainer">
@@ -12,7 +12,7 @@ export default function SignIn() {
         <h1 className="heading">Join</h1>
         <div>
           <input
-            placeholder="Name"
+            placeholder="Firstname and Lastname"
             className="joinInput"
             type="text"
             onChange={(event) => setName(event.target.value)}
@@ -30,7 +30,7 @@ export default function SignIn() {
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat/patient/${name}/${room}`}
         >
-          <button className={"button mt-20"} type="submit">
+          <button className={'button mt-20'} type="submit">
             Sign In
           </button>
         </Link>

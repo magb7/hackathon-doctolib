@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import './styles/PatientModal.css';
-//import PatientsContext from '../contexts/patients-context';
+import PatientsContext from '../contexts/patients-context';
 
-const PatientModal = ({ close }) => {
-  //const { patients, setPatients } = useContext(PatientsContext);
+const PatientModal = ({ close, name }) => {
+  const { patients } = useContext(PatientsContext);
+
   return (
     <>
       <div className="modal">
@@ -13,17 +14,23 @@ const PatientModal = ({ close }) => {
         <div className="header">PATIENT INFORMATION</div>
         <div className="content">
           {' '}
-          <ul>
-            <li>Firstname : </li>
-            <li>Lastname : </li>
-            <li>Mail : </li>
-            <li>Phone : </li>
-            <li>Last appointment : </li>
-          </ul>
+          <div>
+            {patients
+              .filter((patient) => patient.lastname === name)
+              .map((filteredPatient) => (
+                <ul>
+                  <li>Firstname : {filteredPatient.firstname}</li>
+                  <li>Lastname : {filteredPatient.lastname}</li>
+                  <li>Mail : {filteredPatient.email}</li>
+                  <li>Phone : {filteredPatient.phone}</li>
+                  <li>Last appointment : {filteredPatient.lastAppointment}</li>
+                </ul>
+              ))}
+          </div>
         </div>
+
         <div>
           {' '}
-          <button>Modifier</button>
           <button>Accéder à Doctolib</button>
         </div>
       </div>
