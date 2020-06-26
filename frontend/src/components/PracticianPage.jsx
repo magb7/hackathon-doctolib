@@ -1,7 +1,6 @@
 import React from "react";
 import SidebarPractician from "./SidebarPractician";
 import PatientCard from "./PatientCard";
-import Chat from "./Chat";
 
 import "./styles/Page.css";
 
