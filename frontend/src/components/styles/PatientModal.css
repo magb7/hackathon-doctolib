@@ -1,0 +1,85 @@
+.modal {
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.modal > .header {
+  width: 100%;
+  font-family: 'lato', sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 5px;
+  color: #5594db;
+}
+
+.modal > .content {
+  width: 100%;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.modal > .content li {
+  font-size: 0.8em;
+  color: black;
+}
+
+.modal > .actions {
+  margin: auto;
+}
+
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 1.2em;
+  background: #5594db;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #cfcece;
+}
+
+.modal button {
+  border: 1px solid #5594db;
+  width: 45%;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(239, 242, 246);
+  color: #5594db;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.modal button:hover {
+  background-color: #5594db;
+  color: white;
+}
+
+.modal p {
+  margin: 5px;
+}
+
+.popup-content {
+  padding: 30px;
+  color: #787878;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 990px) {
+}

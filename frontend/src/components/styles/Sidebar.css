@@ -13,7 +13,7 @@
   justify-items: center;
   align-items: start;
   font-size: 0.7rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 20%;
@@ -45,8 +45,8 @@
 nav ul li {
   display: grid;
   grid-template-areas:
-    "img textspan"
-    "img textspan";
+    'img textspan'
+    'img textspan';
   grid-template-columns: 30px 1fr;
   grid-column-gap: 0;
   margin-left: 3px;
