@@ -4,13 +4,14 @@
   border-radius: 25px;
   width: 70vw;
   align-items: center;
+  justify-content: space-around;
+  background: lightgrey;
 }
 
 .input {
   border: none;
-  border-radius: 0;
   padding: 5%;
-  width: 80%;
+  width: 70%;
   font-size: 1.2em;
   background: lightgrey;
   border-radius: 25px;
@@ -27,19 +28,19 @@ select:focus {
   border-radius: 100px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #e5a33f;
-  padding: 20px;
+  background: hsl(36, 76%, 57%);
+  padding: 10px;
   display: inline-block;
   border: none;
-  width: 20%;
+  align-self: center;
+}
+.sendButton img {
+  max-width: 6vw;
 }
 
-/* @media (min-width: 320px) and (max-width: 480px) {
+/@media (min-width: 320px) and (max-width: 980px) {
   .input {
     width: 50%;
     font-size: 0.8em;
   }
-  .sendButton {
-    width: 50%;
-  }
-} */
+}
