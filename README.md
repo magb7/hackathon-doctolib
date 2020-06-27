@@ -1,4 +1,4 @@
-![team bistouri.jsx](https://drive.google.com/file/d/1in9EoHge6NBOhCyLxcGyCQZK0DLiuH4v/view?usp=sharing)
+![team bistouri.jsx]()
 
 ## Hackathon Doctolib
 
