@@ -17,9 +17,6 @@ const SidebarPractician = () => {
   };
 
   const getAllPatients = () => {
-    // const AllPatients = [...patients].sort(function (a, b) {
-    //   return a.lastname.localeCompare(b.lastname);
-    // });
     setFiltered([...patients]);
     setTitle("All Patients");
   };
