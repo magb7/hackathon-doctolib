@@ -1,6 +1,6 @@
 ![team bistouri.jsx](https://github.com/magb7/hackathon-doctolib/blob/dev/frontend/public/logo/bistouLogo1-01.jpg)
 
-## Tchat Care
+# Tchat Care
 
 Project developed during the online hackathon organized by Doctolib and the Wild Code School from June 24 to 27, 2020.
 
@@ -10,14 +10,14 @@ Project developed during the online hackathon organized by Doctolib and the Wild
 
 **Reward:** The project came in third place in its cluster.
 
-# Technologies used
+## Technologies used
 
 - React.JS
 - Node.JS
 - Socket.io
 - Material UI
 
-# Team members
+## Team members
 
 - Benjamin Durand as [narudb](https://github.com/narudb)
 - Liora Laulier as [llaulier](https://github.com/llaulier)
